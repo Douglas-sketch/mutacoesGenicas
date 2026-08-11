@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <title>GENE-X | Mutações Gênicas e Cromossômicas</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">GENE<span>X</span></div>
+
+            <ul>
+                <li><a href="#conceito">Conceito</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#aplicacoes">Aplicações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🧬 ESTAÇÃO INTERATIVA DE GENÉTICA
+            </span>
+
+            <h1>
+                Mutações <span class="gradient">Gênicas</span><br>
+                e Cromossômicas
+            </h1>
+
+            <p>
+                Descubra como alterações no DNA e nos cromossomos podem
+                modificar as características dos organismos e influenciar
+                a saúde, a evolução e a sociedade.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="btn btn-primary" href="#simulador">
+                    🧪 Experimentar simulador
+                </a>
+
+                <a class="btn btn-secondary" href="#quiz">
+                    🎯 Testar conhecimentos
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONCEITO -->
+
+    <section id="conceito">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>01 • Fundamentos</small>
+
+                <h2>O que é uma mutação?</h2>
+
+                <p>
+                    Uma mutação é uma alteração no material genético.
+                    Ela pode ocorrer no DNA de um gene ou envolver
+                    estruturas maiores dos cromossomos.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="icon">🧬</div>
+
+                    <h3>DNA</h3>
+
+                    <p>
+                        Molécula que armazena as informações genéticas
+                        necessárias para o funcionamento e desenvolvimento
+                        dos organismos.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icon">🧩</div>
+
+                    <h3>Gene</h3>
+
+                    <p>
+                        Segmento do DNA que contém informações relacionadas
+                        à produção de moléculas funcionais, como proteínas
+                        ou RNAs.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icon">🧬</div>
+
+                    <h3>Cromossomo</h3>
+
+                    <p>
+                        Estrutura formada por DNA associado a proteínas.
+                        Os cromossomos organizam grande parte do material
+                        genético dentro das células.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPOS -->
+
+    <section id="tipos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>02 • Classificação</small>
+
+                <h2>Dois grandes tipos</h2>
+
+                <p>
+                    As mutações podem ser classificadas de acordo com
+                    a escala da alteração genética.
+                </p>
+
+            </div>
+
+
+            <div class="comparison">
+
+                <div class="mutation-box gene">
+
+                    <h3>🧬 Mutação gênica</h3>
+
+                    <p>
+                        Acontece quando ocorre uma alteração na sequência
+                        de DNA de um gene.
+                    </p>
+
+                    <br>
+
+                    <ul>
+                        <li>Substituição de bases</li>
+                        <li>Inserção de bases</li>
+                        <li>Deleção de bases</li>
+                        <li>Pode alterar uma proteína</li>
+                        <li>Exemplo: algumas variantes associadas à anemia falciforme</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="mutation-box chromosome">
+
+                    <h3>🧬 Mutação cromossômica</h3>
+
+                    <p>
+                        Envolve alterações na estrutura ou no número
+                        dos cromossomos.
+                    </p>
+
+                    <br>
+
+                    <ul>
+                        <li>Deleção</li>
+                        <li>Duplicação</li>
+                        <li>Inversão</li>
+                        <li>Translocação</li>
+                        <li>Aneuploidias, como a trissomia 21</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIMULADOR -->
+
+    <section id="simulador">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>03 • Experiência</small>
+
+                <h2>Simulador de Mutação</h2>
+
+                <p>
+                    Observe uma sequência de DNA e veja como diferentes
+                    alterações podem modificar sua sequência.
+                </p>
+
+            </div>
+
+
+            <div class="simulator">
+
+                <h3>Sequência original</h3>
+
+                <div class="dna" id="dna"></div>
+
+                <div class="simulator-buttons">
+
+                    <button class="btn btn-secondary" onclick="mutate('substituicao')">
+                        Substituição
+                    </button>
+
+                    <button class="btn btn-secondary" onclick="mutate('insercao')">
+                        Inserção
+                    </button>
+
+                    <button class="btn btn-secondary" onclick="mutate('delecao')">
+                        Deleção
+                    </button>
+
+                    <button class="btn btn-primary" onclick="resetDNA()">
+                        Restaurar
+                    </button>
+
+                </div>
+
+
+                <div class="mutation-result" id="mutationResult">
+                    Escolha um tipo de mutação para começar.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section id="quiz">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>04 • Desafio</small>
+
+                <h2>Quiz Genético</h2>
+
+                <p>
+                    Teste seus conhecimentos sobre mutações.
+                </p>
+
+            </div>
+
+
+            <div class="quiz">
+
+                <div class="question">
+
+                    <h3>
+                        1. O que caracteriza uma mutação gênica?
+                    </h3>
+
+                    <div class="answers">
+
+                        <button onclick="answer(this, true)">
+                            Uma alteração na sequência de DNA de um gene
+                        </button>
+
+                        <button onclick="answer(this, false)">
+                            Sempre uma alteração no número de cromossomos
+                        </button>
+
+                        <button onclick="answer(this, false)">
+                            Uma mudança exclusivamente no formato da célula
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="question">
+
+                    <h3>
+                        2. Qual situação representa uma alteração cromossômica numérica?
+                    </h3>
+
+                    <div class="answers">
+
+                        <button onclick="answer(this, false)">
+                            Substituição de uma base nitrogenada
+                        </button>
+
+                        <button onclick="answer(this, true)">
+                            Trissomia 21
+                        </button>
+
+                        <button onclick="answer(this, false)">
+                            Troca de uma única base do DNA
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="question">
+
+                    <h3>
+                        3. Toda mutação causa uma doença?
+                    </h3>
+
+                    <div class="answers">
+
+                        <button onclick="answer(this, false)">
+                            Sim, todas são prejudiciais
+                        </button>
+
+                        <button onclick="answer(this, true)">
+                            Não, seus efeitos podem variar
+                        </button>
+
+                        <button onclick="answer(this, false)">
+                            Sim, porque sempre altera proteínas
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="quizResult">
+                    Responda às questões.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MITO OU VERDADE -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>05 • Interação</small>
+
+                <h2>Mito ou Verdade?</h2>
+
+                <p>
+                    Descubra se você consegue diferenciar fatos científicos
+                    de ideias incorretas.
+                </p>
+
+            </div>
+
+
+            <div class="myth">
+
+                <div class="myth-text" id="mythText">
+                    "Toda mutação é prejudicial ao organismo."
+                </div>
+
+                <div class="myth-buttons">
+
+                    <button class="truth" onclick="mythAnswer(false)">
+                        VERDADE
+                    </button>
+
+                    <button class="lie" onclick="mythAnswer(true)">
+                        MITO
+                    </button>
+
+                </div>
+
+                <div id="mythResult"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APLICAÇÕES -->
+
+    <section id="aplicacoes">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>06 • Ciência e sociedade</small>
+
+                <h2>Por que isso importa?</h2>
+
+                <p>
+                    O estudo das mutações possui aplicações em diversas
+                    áreas da ciência e da sociedade.
+                </p>
+
+            </div>
+
+
+            <div class="applications">
+
+                <div class="application">
+
+                    <h3>🏥 Medicina</h3>
+
+                    <p>
+                        O estudo de variantes genéticas pode ajudar na
+                        compreensão de doenças e no desenvolvimento de
+                        estratégias de diagnóstico e tratamento.
+                    </p>
+
+                </div>
+
+
+                <div class="application">
+
+                    <h3>🧬 Diagnóstico genético</h3>
+
+                    <p>
+                        Técnicas de análise genética podem identificar
+                        determinadas alterações no DNA e nos cromossomos.
+                    </p>
+
+                </div>
+
+
+                <div class="application">
+
+                    <h3>🔬 Pesquisa científica</h3>
+
+                    <p>
+                        Pesquisadores estudam mutações para compreender
+                        processos celulares, doenças e mecanismos biológicos.
+                    </p>
+
+                </div>
+
+
+                <div class="application">
+
+                    <h3>🌎 Evolução</h3>
+
+                    <p>
+                        Mutações são uma fonte de variação genética e,
+                        junto a outros processos, contribuem para a
+                        diversidade dos seres vivos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>07 • Cromossomos</small>
+
+                <h2>Explore o cariótipo</h2>
+
+                <p>
+                    Um cariótipo representa os cromossomos de uma célula
+                    organizados de acordo com características como tamanho
+                    e estrutura.
+                </p>
+
+            </div>
+
+
+            <div class="karyotype">
+
+                <div class="chromosome">1</div>
+                <div class="chromosome">2</div>
+                <div class="chromosome">3</div>
+                <div class="chromosome">4</div>
+                <div class="chromosome">5</div>
+                <div class="chromosome">6</div>
+                <div class="chromosome">7</div>
+                <div class="chromosome">8</div>
+                <div class="chromosome">9</div>
+                <div class="chromosome">10</div>
+                <div class="chromosome">11</div>
+                <div class="chromosome">12</div>
+                <div class="chromosome">13</div>
+                <div class="chromosome">14</div>
+                <div class="chromosome">15</div>
+                <div class="chromosome">16</div>
+                <div class="chromosome">17</div>
+                <div class="chromosome">18</div>
+                <div class="chromosome">19</div>
+                <div class="chromosome">20</div>
+                <div class="chromosome">21</div>
+                <div class="chromosome">22</div>
+                <div class="chromosome">X</div>
+                <div class="chromosome">Y</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>08 • Curiosidades</small>
+
+                <h2>Você sabia?</h2>
+
+            </div>
+
+
+            <div class="facts">
+
+                <div class="fact">
+
+                    <strong>DNA</strong>
+
+                    <p>
+                        O DNA funciona como uma molécula de armazenamento
+                        das informações genéticas.
+                    </p>
+
+                </div>
+
+
+                <div class="fact">
+
+                    <strong>21</strong>
+
+                    <p>
+                        A síndrome de Down está associada, na maioria dos
+                        casos, à presença de uma cópia extra do cromossomo 21.
+                    </p>
+
+                </div>
+
+
+                <div class="fact">
+
+                    <strong>🔄</strong>
+
+                    <p>
+                        Mutações podem ocorrer espontaneamente ou ser
+                        favorecidas por determinados agentes mutagênicos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>09 • Pesquisa</small>
+
+                <h2>Referências científicas</h2>
+
+                <p>
+                    Fontes utilizadas para a elaboração do conteúdo.
+                </p>
+
+            </div>
+
+
+            <div class="references">
+
+                <ul>
+
+                    <li>
+                        National Human Genome Research Institute —
+                        informações sobre genética e genoma humano.
+                    </li>
+
+                    <li>
+                        MedlinePlus Genetics — informações sobre genes,
+                        cromossomos e condições genéticas.
+                    </li>
+
+                    <li>
+                        National Cancer Institute — informações sobre
+                        alterações genéticas relacionadas ao câncer.
+                    </li>
+
+                    <li>
+                        Organização Mundial da Saúde — informações
+                        relacionadas à genética e saúde.
+                    </li>
+
+                    <li>
+                        Alberts et al. — Molecular Biology of the Cell.
+                    </li>
+
+                    <li>
+                        Campbell — Biologia.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            🧬 GENE-X — Estação Interativa de Genética
+        </p>
+
+        <p>
+            Mutações Gênicas e Cromossômicas • Seminário de Biologia
+        </p>
+
+    </footer>
+
+
+    <script src="src/script/script.js"></script>
+
+</body>
+
+</html>
