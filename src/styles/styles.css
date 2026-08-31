@@ -1,815 +1,984 @@
+CSS
 /* =========================
    RESET
 ========================= */
-
+ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
-
+ 
+ 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
+ 
     background: #07111f;
-
+ 
     color: #f5f7fa;
-
+ 
     line-height: 1.6;
 }
-
-
+ 
+ 
+/* =========================
+   ACESSIBILIDADE
+========================= */
+ 
+.skip-link {
+    position: absolute;
+ 
+    top: -60px;
+ 
+    left: 12px;
+ 
+    z-index: 2000;
+ 
+    background: #55e6ff;
+ 
+    color: #06111e;
+ 
+    padding: 10px 16px;
+ 
+    border-radius: 8px;
+ 
+    font-weight: bold;
+ 
+    text-decoration: none;
+ 
+    transition: top 0.2s;
+}
+ 
+ 
+.skip-link:focus {
+    top: 12px;
+}
+ 
+ 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #55e6ff;
+ 
+    outline-offset: 3px;
+}
+ 
+ 
+@media (prefers-reduced-motion: reduce) {
+ 
+    * {
+        scroll-behavior: auto !important;
+ 
+        transition-duration: 0.01ms !important;
+ 
+        animation-duration: 0.01ms !important;
+    }
+ 
+}
+ 
+ 
 /* =========================
    HEADER
 ========================= */
-
+ 
 header {
     position: fixed;
-
+ 
     top: 0;
-
+ 
     width: 100%;
-
+ 
     z-index: 1000;
-
+ 
     background: rgba(7, 17, 31, 0.92);
-
+ 
     backdrop-filter: blur(12px);
-
+ 
     border-bottom: 1px solid #1d3047;
 }
-
-
+ 
+ 
 nav {
     max-width: 1200px;
-
+ 
     margin: auto;
-
+ 
     height: 72px;
-
+ 
     display: flex;
-
+ 
     align-items: center;
-
+ 
     justify-content: space-between;
-
+ 
     padding: 0 20px;
 }
-
-
+ 
+ 
 .logo {
     font-size: 22px;
-
+ 
     font-weight: 900;
-
+ 
     color: #55e6ff;
 }
-
-
+ 
+ 
 .logo span {
     color: #a855f7;
 }
-
-
+ 
+ 
 nav ul {
     display: flex;
-
+ 
     list-style: none;
-
+ 
     gap: 24px;
 }
-
-
+ 
+ 
 nav a {
     color: #cbd5e1;
-
+ 
     text-decoration: none;
-
+ 
     font-size: 14px;
-
+ 
     transition: 0.3s;
 }
-
-
+ 
+ 
 nav a:hover {
     color: #55e6ff;
 }
-
-
+ 
+ 
 /* =========================
    HERO
 ========================= */
-
+ 
 .hero {
     min-height: 100vh;
-
+ 
     display: flex;
-
+ 
     align-items: center;
-
+ 
     justify-content: center;
-
+ 
     text-align: center;
-
+ 
     padding: 100px 20px 60px;
-
+ 
     background:
         radial-gradient(
             circle at 20% 20%,
             rgba(168, 85, 247, 0.20),
             transparent 30%
         ),
-
+ 
         radial-gradient(
             circle at 80% 60%,
             rgba(85, 230, 255, 0.15),
             transparent 30%
         ),
-
+ 
         #07111f;
 }
-
-
+ 
+ 
 .hero-content {
     max-width: 850px;
 }
-
-
+ 
+ 
 .badge {
     display: inline-block;
-
+ 
     padding: 8px 15px;
-
+ 
     border-radius: 50px;
-
+ 
     background: #10253b;
-
+ 
     color: #55e6ff;
-
+ 
     border: 1px solid #1f5367;
-
+ 
     margin-bottom: 20px;
-
+ 
     font-size: 13px;
 }
-
-
+ 
+ 
 .hero h1 {
     font-size: clamp(42px, 8vw, 78px);
-
+ 
     line-height: 1;
-
+ 
     margin-bottom: 25px;
 }
-
-
+ 
+ 
 .gradient {
     background: linear-gradient(
         90deg,
         #55e6ff,
         #a855f7
     );
-
+ 
     -webkit-background-clip: text;
-
+ 
+    background-clip: text;
+ 
     color: transparent;
 }
-
-
+ 
+ 
 .hero p {
     max-width: 700px;
-
+ 
     margin: auto;
-
+ 
     color: #aebdce;
-
+ 
     font-size: 18px;
 }
-
-
+ 
+ 
 .hero-buttons {
     margin-top: 35px;
-
+ 
     display: flex;
-
+ 
     justify-content: center;
-
+ 
     gap: 15px;
-
+ 
     flex-wrap: wrap;
 }
-
-
+ 
+ 
 /* =========================
    BOTÕES
 ========================= */
-
+ 
 .btn {
     padding: 13px 22px;
-
+ 
     border-radius: 10px;
-
+ 
     border: none;
-
+ 
     cursor: pointer;
-
+ 
     text-decoration: none;
-
+ 
     font-weight: bold;
-
+ 
+    font-size: 15px;
+ 
+    font-family: inherit;
+ 
+    display: inline-block;
+ 
     transition: 0.3s;
 }
-
-
+ 
+ 
 .btn-primary {
     background: #55e6ff;
-
+ 
     color: #06111e;
 }
-
-
+ 
+ 
 .btn-primary:hover {
     transform: translateY(-3px);
-
+ 
     box-shadow:
         0 8px 25px
         rgba(85, 230, 255, 0.25);
 }
-
-
+ 
+ 
 .btn-secondary {
     border: 1px solid #29435e;
-
+ 
     color: white;
-
+ 
     background: #0b1b2d;
 }
-
-
+ 
+ 
 .btn-secondary:hover {
     border-color: #55e6ff;
 }
-
-
+ 
+ 
 /* =========================
    SEÇÕES
 ========================= */
-
+ 
 section {
     padding: 100px 20px;
 }
-
-
+ 
+ 
 .container {
     max-width: 1100px;
-
+ 
     margin: auto;
 }
-
-
+ 
+ 
 .section-title {
     text-align: center;
-
+ 
     margin-bottom: 50px;
 }
-
-
+ 
+ 
 .section-title small {
     color: #55e6ff;
-
+ 
     text-transform: uppercase;
-
+ 
     letter-spacing: 2px;
 }
-
-
+ 
+ 
 .section-title h2 {
     font-size: 40px;
-
+ 
     margin-top: 8px;
 }
-
-
+ 
+ 
 .section-title p {
     color: #9cacbf;
-
+ 
     max-width: 650px;
-
+ 
     margin: 10px auto;
 }
-
-
+ 
+ 
 /* =========================
    CARDS
 ========================= */
-
+ 
 .cards {
     display: grid;
-
+ 
     grid-template-columns:
         repeat(3, 1fr);
-
+ 
     gap: 20px;
 }
-
-
+ 
+ 
 .card {
     background: #0b1b2d;
-
+ 
     border: 1px solid #1b314a;
-
+ 
     padding: 28px;
-
+ 
     border-radius: 16px;
-
+ 
     transition: 0.3s;
 }
-
-
+ 
+ 
 .card:hover {
     transform: translateY(-5px);
-
+ 
     border-color: #55e6ff;
 }
-
-
+ 
+ 
 .icon {
     font-size: 35px;
-
+ 
     margin-bottom: 15px;
 }
-
-
+ 
+ 
 .card h3 {
     margin-bottom: 10px;
 }
-
-
+ 
+ 
 .card p {
     color: #9cacbf;
-
+ 
     font-size: 15px;
 }
-
-
+ 
+ 
 /* ==================================================
    COMPARAÇÃO DAS MUTAÇÕES
 ================================================== */
-
+ 
 .comparison {
-
+ 
     display: grid;
-
+ 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
-
+ 
     gap: 25px;
-
+ 
     align-items: stretch;
 }
-
-
+ 
+ 
 /* =========================
    CARD DE MUTAÇÃO
 ========================= */
-
+ 
 .mutation-box {
-
+ 
     padding: 30px;
-
+ 
     border-radius: 18px;
-
+ 
     background: #0b1b2d;
-
+ 
     border: 1px solid #263d56;
-
+ 
     min-width: 0;
-
+ 
     overflow: hidden;
-
+ 
     position: relative;
 }
-
-
+ 
+ 
 /* =========================
    BORDA SUPERIOR
 ========================= */
-
+ 
 .mutation-box.gene {
     border-top: 4px solid #55e6ff;
 }
-
-
+ 
+ 
 .mutation-box.chromosomal-mutation {
     border-top: 4px solid #a855f7;
 }
-
-
+ 
+ 
 /* =========================
    CABEÇALHO DO CARD
 ========================= */
-
+ 
 .mutation-header {
-
+ 
     display: flex;
-
+ 
     align-items: center;
-
+ 
     gap: 12px;
-
+ 
     margin-bottom: 18px;
 }
-
-
+ 
+ 
 .mutation-header h3 {
-
+ 
     font-size: 25px;
-
+ 
     margin: 0;
-
+ 
     line-height: 1.2;
 }
-
-
+ 
+ 
 .mutation-icon {
-
+ 
     font-size: 30px;
-
+ 
     flex-shrink: 0;
 }
-
-
+ 
+ 
 /* =========================
    TEXTO DOS CARDS
 ========================= */
-
+ 
 .mutation-box p {
-
+ 
     color: #e5edf5;
-
+ 
     margin-bottom: 20px;
-
+ 
     font-size: 16px;
 }
-
-
+ 
+ 
 .mutation-box ul {
-
+ 
     padding-left: 20px;
-
+ 
     color: #b4c2d2;
 }
-
-
+ 
+ 
 .mutation-box li {
-
+ 
     margin-bottom: 10px;
 }
-
-
+ 
+ 
+/* =========================
+   CAUSAS / AGENTES MUTAGÊNICOS
+========================= */
+ 
+#causas {
+    background: #091625;
+}
+ 
+ 
+.causes {
+ 
+    display: grid;
+ 
+    grid-template-columns:
+        repeat(4, 1fr);
+ 
+    gap: 20px;
+}
+ 
+ 
+.cause {
+ 
+    padding: 24px;
+ 
+    background: #0b1b2d;
+ 
+    border: 1px solid #1b314a;
+ 
+    border-left: 3px solid #55e6ff;
+ 
+    border-radius: 12px;
+}
+ 
+ 
+.cause h3 {
+ 
+    margin-bottom: 10px;
+ 
+    font-size: 17px;
+}
+ 
+ 
+.cause p {
+ 
+    color: #9cacbf;
+ 
+    font-size: 14px;
+}
+ 
+ 
 /* =========================
    SIMULADOR
 ========================= */
-
-#simulador {
-    background: #091625;
-}
-
-
+ 
 .simulator {
-
+ 
     max-width: 800px;
-
+ 
     margin: auto;
-
+ 
     background: #0b1b2d;
-
+ 
     border: 1px solid #243b55;
-
+ 
     border-radius: 20px;
-
+ 
     padding: 35px;
 }
-
-
+ 
+ 
 .dna {
-
+ 
     display: flex;
-
+ 
     justify-content: center;
-
+ 
     flex-wrap: wrap;
-
+ 
     gap: 8px;
-
-    margin: 30px 0;
+ 
+    margin: 30px 0 15px;
 }
-
-
+ 
+ 
 .base {
-
+ 
     width: 42px;
-
+ 
     height: 42px;
-
+ 
     border-radius: 8px;
-
+ 
     display: flex;
-
+ 
     align-items: center;
-
+ 
     justify-content: center;
-
+ 
     background: #122b43;
-
+ 
     border: 1px solid #31516d;
-
+ 
     font-weight: bold;
 }
-
-
+ 
+ 
+.base.codon {
+ 
+    border-color: #55e6ff;
+ 
+    box-shadow: 0 0 0 1px rgba(85, 230, 255, 0.4);
+}
+ 
+ 
 .base.mutated {
-
+ 
     background: #a855f7;
-
+ 
     border-color: #c084fc;
-
+ 
     color: white;
 }
-
-
+ 
+ 
+.simulator-hint {
+ 
+    text-align: center;
+ 
+    color: #8296ab;
+ 
+    font-size: 13px;
+ 
+    max-width: 520px;
+ 
+    margin: 0 auto 15px;
+}
+ 
+ 
+.codon-readout {
+ 
+    text-align: center;
+ 
+    font-size: 15px;
+ 
+    color: #cbd5e1;
+ 
+    margin-bottom: 20px;
+ 
+    min-height: 22px;
+}
+ 
+ 
+.codon-readout strong {
+ 
+    color: #55e6ff;
+}
+ 
+ 
 .simulator-buttons {
-
+ 
     display: flex;
-
+ 
     justify-content: center;
-
+ 
     gap: 10px;
-
+ 
     flex-wrap: wrap;
 }
-
-
+ 
+ 
 .mutation-result {
-
+ 
     margin-top: 25px;
-
+ 
     padding: 20px;
-
+ 
     background: #081422;
-
+ 
     border-radius: 12px;
-
+ 
     color: #b9c8d8;
-
+ 
     text-align: center;
 }
-
-
+ 
+ 
 /* =========================
    QUIZ
 ========================= */
-
+ 
 .quiz {
-
+ 
     max-width: 800px;
-
+ 
     margin: auto;
-
+ 
     background: #0b1b2d;
-
+ 
     padding: 35px;
-
+ 
     border-radius: 18px;
-
+ 
     border: 1px solid #233c56;
 }
-
-
+ 
+ 
 .question {
-
+ 
     margin-bottom: 25px;
 }
-
-
+ 
+ 
 .question h3 {
-
+ 
     margin-bottom: 15px;
 }
-
-
+ 
+ 
 .answers button {
-
+ 
     width: 100%;
-
+ 
     text-align: left;
-
+ 
     padding: 14px;
-
+ 
     margin: 5px 0;
-
+ 
     border-radius: 9px;
-
+ 
     background: #10253a;
-
+ 
     border: 1px solid #27435f;
-
+ 
     color: white;
-
+ 
+    font-family: inherit;
+ 
+    font-size: 15px;
+ 
     cursor: pointer;
-
+ 
     transition: 0.2s;
 }
-
-
-.answers button:hover {
-
+ 
+ 
+.answers button:hover:not(:disabled) {
+ 
     border-color: #55e6ff;
 }
-
-
+ 
+ 
+.answers button:disabled {
+ 
+    cursor: default;
+}
+ 
+ 
 .answers button.correct {
-
+ 
     background: #14532d;
-
+ 
     border-color: #22c55e;
 }
-
-
+ 
+ 
 .answers button.wrong {
-
+ 
     background: #571b2b;
-
+ 
     border-color: #ef4444;
 }
-
-
+ 
+ 
 #quizResult {
-
+ 
     text-align: center;
-
+ 
     margin-top: 25px;
-
+ 
     font-size: 20px;
-
+ 
     font-weight: bold;
 }
-
-
+ 
+ 
+.quiz-reset {
+ 
+    display: block;
+ 
+    margin: 20px auto 0;
+}
+ 
+ 
 /* =========================
    MITO OU VERDADE
 ========================= */
-
+ 
 .myth {
-
+ 
     max-width: 750px;
-
+ 
     margin: auto;
-
+ 
     text-align: center;
-
+ 
     background:
         linear-gradient(
             135deg,
             #101f35,
             #17132c
         );
-
+ 
     border: 1px solid #3a3562;
-
+ 
     border-radius: 20px;
-
+ 
     padding: 40px;
 }
-
-
+ 
+ 
 .myth-text {
-
+ 
     font-size: 25px;
-
+ 
     margin-bottom: 25px;
 }
-
-
+ 
+ 
 .myth-buttons {
-
+ 
     display: flex;
-
+ 
     justify-content: center;
-
+ 
     gap: 15px;
-
+ 
     flex-wrap: wrap;
 }
-
-
+ 
+ 
 .myth button {
-
+ 
     padding: 13px 25px;
-
+ 
     border-radius: 9px;
-
+ 
     border: none;
-
+ 
+    font-family: inherit;
+ 
     cursor: pointer;
-
+ 
     font-weight: bold;
 }
-
-
+ 
+ 
 .truth {
-
+ 
     background: #22c55e;
-
+ 
     color: #06130a;
 }
-
-
+ 
+ 
 .lie {
-
+ 
     background: #ef4444;
-
+ 
     color: white;
 }
-
-
+ 
+ 
 #mythResult {
-
+ 
     margin-top: 20px;
-
+ 
     color: #c4d1df;
 }
-
-
+ 
+ 
 /* =========================
    APLICAÇÕES
 ========================= */
-
+ 
 .applications {
-
+ 
     display: grid;
-
+ 
     grid-template-columns:
         repeat(2, 1fr);
-
+ 
     gap: 20px;
 }
-
-
+ 
+ 
 .application {
-
+ 
     padding: 25px;
-
+ 
     background: #0b1b2d;
-
+ 
     border-radius: 15px;
-
+ 
     border: 1px solid #213a54;
 }
-
-
+ 
+ 
 .application h3 {
-
+ 
     margin-bottom: 8px;
 }
-
-
+ 
+ 
 .application p {
-
+ 
     color: #9cacbf;
 }
-
-
+ 
+ 
 /* ==================================================
    CARIÓTIPO
-   IMPORTANTE:
-   A classe agora é .karyotype-chromosome
 ================================================== */
-
+ 
 .karyotype {
-
+ 
     display: grid;
-
+ 
     grid-template-columns:
         repeat(8, 1fr);
-
+ 
     gap: 10px;
-
+ 
     max-width: 750px;
-
+ 
     margin: auto;
 }
-
-
+ 
+ 
 .karyotype-chromosome {
-
+ 
     height: 85px;
-
+ 
     border-radius:
         50% 50% 40% 40%;
-
+ 
     background:
         linear-gradient(
             to right,
@@ -819,136 +988,176 @@ section {
             #172d43 57%,
             #55e6ff 57%
         );
-
+ 
     border: 1px solid #72ebff;
-
+ 
     display: flex;
-
+ 
     justify-content: center;
-
+ 
     align-items: flex-end;
-
+ 
     padding-bottom: 8px;
-
+ 
     font-size: 12px;
-
+ 
     color: #03101b;
-
+ 
     font-weight: bold;
+ 
+    font-family: inherit;
+ 
+    cursor: pointer;
+ 
+    transition: transform 0.2s, box-shadow 0.2s;
 }
-
-
+ 
+ 
+.karyotype-chromosome:hover {
+ 
+    transform: translateY(-3px);
+}
+ 
+ 
+.karyotype-chromosome.trissomia {
+ 
+    box-shadow: 0 0 0 2px #a855f7;
+}
+ 
+ 
+.karyotype-chromosome.active {
+ 
+    box-shadow: 0 0 0 3px #f5f7fa;
+}
+ 
+ 
+.karyotype-info {
+ 
+    max-width: 650px;
+ 
+    margin: 25px auto 0;
+ 
+    text-align: center;
+ 
+    color: #9cacbf;
+ 
+    font-size: 14px;
+}
+ 
+ 
 /* =========================
    CURIOSIDADES
 ========================= */
-
+ 
 .facts {
-
+ 
     display: grid;
-
+ 
     grid-template-columns:
         repeat(3, 1fr);
-
+ 
     gap: 20px;
 }
-
-
+ 
+ 
 .fact {
-
+ 
     padding: 25px;
-
+ 
     border-radius: 15px;
-
+ 
     background: #0b1b2d;
-
+ 
     border: 1px solid #1d354e;
 }
-
-
+ 
+ 
 .fact strong {
-
+ 
     display: block;
-
+ 
     color: #55e6ff;
-
+ 
     font-size: 30px;
-
+ 
     margin-bottom: 8px;
 }
-
-
+ 
+ 
 /* =========================
    REFERÊNCIAS
 ========================= */
-
+ 
 .references {
-
+ 
     max-width: 800px;
-
+ 
     margin: auto;
 }
-
-
+ 
+ 
 .references li {
-
+ 
     margin-bottom: 12px;
-
+ 
     color: #b8c5d4;
 }
-
-
+ 
+ 
 /* =========================
    FOOTER
 ========================= */
-
+ 
 footer {
-
+ 
     text-align: center;
-
+ 
     padding: 35px 20px;
-
+ 
     border-top: 1px solid #1d3047;
-
+ 
     color: #73859a;
 }
-
-
+ 
+ 
 /* =========================
    RESPONSIVO
 ========================= */
-
+ 
 @media (max-width: 800px) {
-
+ 
     nav ul {
         display: none;
     }
-
-
+ 
+ 
     .cards,
-    .facts {
+    .facts,
+    .causes {
         grid-template-columns: 1fr;
     }
-
-
+ 
+ 
     .comparison,
     .applications {
         grid-template-columns: 1fr;
     }
-
-
+ 
+ 
     .karyotype {
         grid-template-columns:
             repeat(4, 1fr);
     }
-
-
+ 
+ 
     .hero h1 {
         font-size: 48px;
     }
-
-
+ 
+ 
     .mutation-header h3 {
         font-size: 22px;
     }
-
+ 
 }
+ 
