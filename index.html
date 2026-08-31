@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/styles.css">
+    <meta name="description" content="GENE-X é uma estação interativa de genética sobre mutações gênicas e cromossômicas, com simulador de DNA, quiz e cariótipo — material de apoio para seminário de Biologia.">
     <title>GENE-X | Mutações Gênicas e Cromossômicas</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -12,13 +12,15 @@
 
 <body>
 
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <!-- =========================
          HEADER
     ========================== -->
 
     <header>
 
-        <nav>
+        <nav aria-label="Navegação principal">
 
             <div class="logo">
                 GENE<span>X</span>
@@ -27,6 +29,7 @@
             <ul>
                 <li><a href="#conceito">Conceito</a></li>
                 <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#causas">Causas</a></li>
                 <li><a href="#simulador">Simulador</a></li>
                 <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#aplicacoes">Aplicações</a></li>
@@ -36,6 +39,7 @@
 
     </header>
 
+    <main id="conteudo">
 
     <!-- =========================
          HERO
@@ -83,7 +87,7 @@
          CONCEITO
     ========================== -->
 
-    <section id="conceito">
+    <section id="conceito" aria-labelledby="conceito-titulo">
 
         <div class="container">
 
@@ -91,7 +95,7 @@
 
                 <small>01 • FUNDAMENTOS</small>
 
-                <h2>
+                <h2 id="conceito-titulo">
                     O que é uma mutação?
                 </h2>
 
@@ -108,7 +112,7 @@
 
                 <div class="card">
 
-                    <div class="icon">
+                    <div class="icon" aria-hidden="true">
                         🧬
                     </div>
 
@@ -127,7 +131,7 @@
 
                 <div class="card">
 
-                    <div class="icon">
+                    <div class="icon" aria-hidden="true">
                         🧩
                     </div>
 
@@ -146,7 +150,7 @@
 
                 <div class="card">
 
-                    <div class="icon">
+                    <div class="icon" aria-hidden="true">
                         🧬
                     </div>
 
@@ -173,7 +177,7 @@
          TIPOS DE MUTAÇÃO
     ========================== -->
 
-    <section id="tipos">
+    <section id="tipos" aria-labelledby="tipos-titulo">
 
         <div class="container">
 
@@ -183,7 +187,7 @@
                     02 • CLASSIFICAÇÃO
                 </small>
 
-                <h2>
+                <h2 id="tipos-titulo">
                     Dois grandes tipos
                 </h2>
 
@@ -204,7 +208,7 @@
 
                     <div class="mutation-header">
 
-                        <div class="mutation-icon">
+                        <div class="mutation-icon" aria-hidden="true">
                             🧬
                         </div>
 
@@ -215,8 +219,9 @@
                     </div>
 
                     <p>
-                        Acontece quando ocorre uma alteração na sequência
-                        de DNA de um gene.
+                        Acontece quando ocorre uma alteração pontual na
+                        sequência de DNA de um gene, afetando poucos
+                        nucleotídeos.
                     </p>
 
                     <ul>
@@ -234,7 +239,8 @@
                         </li>
 
                         <li>
-                            Pode alterar uma proteína
+                            Pode ou não alterar a proteína produzida,
+                            dependendo de onde ocorre e do código genético
                         </li>
 
                         <li>
@@ -253,7 +259,7 @@
 
                     <div class="mutation-header">
 
-                        <div class="mutation-icon">
+                        <div class="mutation-icon" aria-hidden="true">
                             🧬
                         </div>
 
@@ -264,8 +270,9 @@
                     </div>
 
                     <p>
-                        Envolve alterações na estrutura ou no número
-                        dos cromossomos.
+                        Envolve alterações maiores, na estrutura ou no
+                        número dos cromossomos, afetando muitos genes
+                        de uma vez.
                     </p>
 
                     <ul>
@@ -302,26 +309,99 @@
 
 
     <!-- =========================
-         SIMULADOR
+         CAUSAS / AGENTES MUTAGÊNICOS
     ========================== -->
 
-    <section id="simulador">
+    <section id="causas" aria-labelledby="causas-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    03 • EXPERIÊNCIA
+                    03 • ORIGEM
                 </small>
 
-                <h2>
+                <h2 id="causas-titulo">
+                    De onde vêm as mutações?
+                </h2>
+
+                <p>
+                    Mutações podem surgir espontaneamente, por erros
+                    naturais durante a duplicação do DNA, ou ser
+                    favorecidas por agentes mutagênicos externos.
+                </p>
+
+            </div>
+
+            <div class="causes">
+
+                <div class="cause">
+                    <h3>Espontâneas</h3>
+                    <p>
+                        Erros que ocorrem naturalmente quando a célula
+                        copia o DNA antes de se dividir. Os mecanismos
+                        de reparo celular corrigem a maior parte deles,
+                        mas alguns permanecem.
+                    </p>
+                </div>
+
+                <div class="cause">
+                    <h3>Agentes físicos</h3>
+                    <p>
+                        Radiações, como a luz ultravioleta e a radiação
+                        ionizante, podem danificar diretamente a
+                        molécula de DNA.
+                    </p>
+                </div>
+
+                <div class="cause">
+                    <h3>Agentes químicos</h3>
+                    <p>
+                        Certas substâncias químicas, presentes por
+                        exemplo na fumaça do cigarro, podem reagir com
+                        o DNA e alterar sua sequência.
+                    </p>
+                </div>
+
+                <div class="cause">
+                    <h3>Agentes biológicos</h3>
+                    <p>
+                        Alguns vírus são capazes de inserir seu material
+                        genético no DNA da célula hospedeira, alterando
+                        genes nesse processo.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SIMULADOR
+    ========================== -->
+
+    <section id="simulador" aria-labelledby="simulador-titulo">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>
+                    04 • EXPERIÊNCIA
+                </small>
+
+                <h2 id="simulador-titulo">
                     Simulador de Mutação
                 </h2>
 
                 <p>
                     Observe uma sequência de DNA e veja como diferentes
-                    alterações podem modificar sua sequência.
+                    alterações podem modificar sua sequência — e o
+                    aminoácido que ela codifica.
                 </p>
 
             </div>
@@ -335,14 +415,25 @@
 
                 <div
                     class="dna"
-                    id="dna">
+                    id="dna"
+                    role="list"
+                    aria-label="Sequência de DNA">
                 </div>
+
+                <p class="simulator-hint">
+                    Os 3 primeiros nucleotídeos (destacados) formam um
+                    códon. O RNA mensageiro transcrito a partir dele é
+                    traduzido no aminoácido indicado abaixo da sequência.
+                </p>
+
+                <div class="codon-readout" id="codonReadout" aria-live="polite"></div>
 
 
                 <div class="simulator-buttons">
 
                     <button
                         class="btn btn-secondary"
+                        type="button"
                         onclick="mutate('substituicao')">
 
                         Substituição
@@ -352,6 +443,7 @@
 
                     <button
                         class="btn btn-secondary"
+                        type="button"
                         onclick="mutate('insercao')">
 
                         Inserção
@@ -361,6 +453,7 @@
 
                     <button
                         class="btn btn-secondary"
+                        type="button"
                         onclick="mutate('delecao')">
 
                         Deleção
@@ -370,6 +463,7 @@
 
                     <button
                         class="btn btn-primary"
+                        type="button"
                         onclick="resetDNA()">
 
                         Restaurar
@@ -381,7 +475,8 @@
 
                 <div
                     class="mutation-result"
-                    id="mutationResult">
+                    id="mutationResult"
+                    aria-live="polite">
 
                     Escolha um tipo de mutação para começar.
 
@@ -398,17 +493,17 @@
          QUIZ
     ========================== -->
 
-    <section id="quiz">
+    <section id="quiz" aria-labelledby="quiz-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    04 • DESAFIO
+                    05 • DESAFIO
                 </small>
 
-                <h2>
+                <h2 id="quiz-titulo">
                     Quiz Genético
                 </h2>
 
@@ -421,7 +516,7 @@
 
             <div class="quiz">
 
-                <div class="question">
+                <div class="question" data-question="1">
 
                     <h3>
                         1. O que caracteriza uma mutação gênica?
@@ -429,15 +524,15 @@
 
                     <div class="answers">
 
-                        <button onclick="answer(this, true)">
+                        <button type="button" onclick="answer(this, true)">
                             Uma alteração na sequência de DNA de um gene
                         </button>
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Sempre uma alteração no número de cromossomos
                         </button>
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Uma mudança exclusivamente no formato da célula
                         </button>
 
@@ -446,7 +541,7 @@
                 </div>
 
 
-                <div class="question">
+                <div class="question" data-question="2">
 
                     <h3>
                         2. Qual situação representa uma alteração
@@ -455,15 +550,15 @@
 
                     <div class="answers">
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Substituição de uma base nitrogenada
                         </button>
 
-                        <button onclick="answer(this, true)">
+                        <button type="button" onclick="answer(this, true)">
                             Trissomia 21
                         </button>
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Troca de uma única base do DNA
                         </button>
 
@@ -472,7 +567,7 @@
                 </div>
 
 
-                <div class="question">
+                <div class="question" data-question="3">
 
                     <h3>
                         3. Toda mutação causa uma doença?
@@ -480,15 +575,15 @@
 
                     <div class="answers">
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Sim, todas são prejudiciais
                         </button>
 
-                        <button onclick="answer(this, true)">
+                        <button type="button" onclick="answer(this, true)">
                             Não, seus efeitos podem variar
                         </button>
 
-                        <button onclick="answer(this, false)">
+                        <button type="button" onclick="answer(this, false)">
                             Sim, porque sempre altera proteínas
                         </button>
 
@@ -497,9 +592,45 @@
                 </div>
 
 
-                <div id="quizResult">
+                <div class="question" data-question="4">
+
+                    <h3>
+                        4. Por que uma substituição de base nem sempre
+                        muda o aminoácido produzido?
+                    </h3>
+
+                    <div class="answers">
+
+                        <button type="button" onclick="answer(this, false)">
+                            Porque o ribossomo corrige o erro sozinho
+                        </button>
+
+                        <button type="button" onclick="answer(this, true)">
+                            Porque o código genético é degenerado: mais
+                            de um códon pode indicar o mesmo aminoácido
+                        </button>
+
+                        <button type="button" onclick="answer(this, false)">
+                            Porque o DNA se autorreplica antes da mutação
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="quizResult" aria-live="polite">
                     Responda às questões.
                 </div>
+
+                <button
+                    type="button"
+                    id="quizResetBtn"
+                    class="btn btn-secondary quiz-reset"
+                    onclick="resetQuiz()"
+                    hidden>
+                    Refazer quiz
+                </button>
 
             </div>
 
@@ -512,17 +643,17 @@
          MITO OU VERDADE
     ========================== -->
 
-    <section>
+    <section aria-labelledby="myth-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    05 • INTERAÇÃO
+                    06 • INTERAÇÃO
                 </small>
 
-                <h2>
+                <h2 id="myth-titulo">
                     Mito ou Verdade?
                 </h2>
 
@@ -548,6 +679,7 @@
                 <div class="myth-buttons">
 
                     <button
+                        type="button"
                         class="truth"
                         onclick="mythAnswer(false)">
 
@@ -557,6 +689,7 @@
 
 
                     <button
+                        type="button"
                         class="lie"
                         onclick="mythAnswer(true)">
 
@@ -567,7 +700,7 @@
                 </div>
 
 
-                <div id="mythResult"></div>
+                <div id="mythResult" aria-live="polite"></div>
 
             </div>
 
@@ -580,17 +713,17 @@
          APLICAÇÕES
     ========================== -->
 
-    <section id="aplicacoes">
+    <section id="aplicacoes" aria-labelledby="aplicacoes-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    06 • CIÊNCIA E SOCIEDADE
+                    07 • CIÊNCIA E SOCIEDADE
                 </small>
 
-                <h2>
+                <h2 id="aplicacoes-titulo">
                     Por que isso importa?
                 </h2>
 
@@ -672,56 +805,63 @@
          CARIÓTIPO
     ========================== -->
 
-    <section>
+    <section aria-labelledby="cariotipo-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    07 • CROMOSSOMOS
+                    08 • CROMOSSOMOS
                 </small>
 
-                <h2>
+                <h2 id="cariotipo-titulo">
                     Explore o cariótipo
                 </h2>
 
                 <p>
                     Um cariótipo representa os cromossomos de uma célula
                     organizados de acordo com características como tamanho
-                    e estrutura.
+                    e estrutura. Toque em um cromossomo para ver o par
+                    correspondente na trissomia 21.
                 </p>
 
             </div>
 
 
-            <div class="karyotype">
+            <div class="karyotype" id="karyotype" role="list" aria-label="Cariótipo humano, 23 pares de cromossomos">
 
-                <div class="karyotype-chromosome">1</div>
-                <div class="karyotype-chromosome">2</div>
-                <div class="karyotype-chromosome">3</div>
-                <div class="karyotype-chromosome">4</div>
-                <div class="karyotype-chromosome">5</div>
-                <div class="karyotype-chromosome">6</div>
-                <div class="karyotype-chromosome">7</div>
-                <div class="karyotype-chromosome">8</div>
-                <div class="karyotype-chromosome">9</div>
-                <div class="karyotype-chromosome">10</div>
-                <div class="karyotype-chromosome">11</div>
-                <div class="karyotype-chromosome">12</div>
-                <div class="karyotype-chromosome">13</div>
-                <div class="karyotype-chromosome">14</div>
-                <div class="karyotype-chromosome">15</div>
-                <div class="karyotype-chromosome">16</div>
-                <div class="karyotype-chromosome">17</div>
-                <div class="karyotype-chromosome">18</div>
-                <div class="karyotype-chromosome">19</div>
-                <div class="karyotype-chromosome">20</div>
-                <div class="karyotype-chromosome">21</div>
-                <div class="karyotype-chromosome">22</div>
-                <div class="karyotype-chromosome">X</div>
-                <div class="karyotype-chromosome">Y</div>
+                <button type="button" class="karyotype-chromosome" data-pair="1">1</button>
+                <button type="button" class="karyotype-chromosome" data-pair="2">2</button>
+                <button type="button" class="karyotype-chromosome" data-pair="3">3</button>
+                <button type="button" class="karyotype-chromosome" data-pair="4">4</button>
+                <button type="button" class="karyotype-chromosome" data-pair="5">5</button>
+                <button type="button" class="karyotype-chromosome" data-pair="6">6</button>
+                <button type="button" class="karyotype-chromosome" data-pair="7">7</button>
+                <button type="button" class="karyotype-chromosome" data-pair="8">8</button>
+                <button type="button" class="karyotype-chromosome" data-pair="9">9</button>
+                <button type="button" class="karyotype-chromosome" data-pair="10">10</button>
+                <button type="button" class="karyotype-chromosome" data-pair="11">11</button>
+                <button type="button" class="karyotype-chromosome" data-pair="12">12</button>
+                <button type="button" class="karyotype-chromosome" data-pair="13">13</button>
+                <button type="button" class="karyotype-chromosome" data-pair="14">14</button>
+                <button type="button" class="karyotype-chromosome" data-pair="15">15</button>
+                <button type="button" class="karyotype-chromosome" data-pair="16">16</button>
+                <button type="button" class="karyotype-chromosome" data-pair="17">17</button>
+                <button type="button" class="karyotype-chromosome" data-pair="18">18</button>
+                <button type="button" class="karyotype-chromosome" data-pair="19">19</button>
+                <button type="button" class="karyotype-chromosome" data-pair="20">20</button>
+                <button type="button" class="karyotype-chromosome trissomia" data-pair="21">21</button>
+                <button type="button" class="karyotype-chromosome" data-pair="22">22</button>
+                <button type="button" class="karyotype-chromosome" data-pair="X">X</button>
+                <button type="button" class="karyotype-chromosome" data-pair="Y">Y</button>
 
+            </div>
+
+            <div id="karyotypeInfo" class="karyotype-info" aria-live="polite">
+                O par 21 está destacado: na maioria dos casos de síndrome
+                de Down, existe uma terceira cópia desse cromossomo, e
+                não apenas duas.
             </div>
 
         </div>
@@ -733,17 +873,17 @@
          CURIOSIDADES
     ========================== -->
 
-    <section>
+    <section aria-labelledby="curiosidades-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    08 • CURIOSIDADES
+                    09 • CURIOSIDADES
                 </small>
 
-                <h2>
+                <h2 id="curiosidades-titulo">
                     Você sabia?
                 </h2>
 
@@ -755,12 +895,12 @@
                 <div class="fact">
 
                     <strong>
-                        DNA
+                        46
                     </strong>
 
                     <p>
-                        O DNA funciona como uma molécula de armazenamento
-                        das informações genéticas.
+                        Uma célula humana comum possui 46 cromossomos,
+                        organizados em 23 pares.
                     </p>
 
                 </div>
@@ -804,17 +944,17 @@
          REFERÊNCIAS
     ========================== -->
 
-    <section>
+    <section aria-labelledby="referencias-titulo">
 
         <div class="container">
 
             <div class="section-title">
 
                 <small>
-                    09 • PESQUISA
+                    10 • PESQUISA
                 </small>
 
-                <h2>
+                <h2 id="referencias-titulo">
                     Referências científicas
                 </h2>
 
@@ -865,6 +1005,7 @@
 
     </section>
 
+    </main>
 
     <!-- =========================
          FOOTER
